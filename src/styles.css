@@ -1,0 +1,237 @@
+:root {
+    --fondo: #212121;
+    --container: #323132;
+    --fuenteHeading: "New Amsterdam", sans-serif;
+    --second: hsl(45, 100%, 72%); 
+    --jet: hsl(0, 0%, 22%);
+}
+html {
+    font-size: 62.5%; 
+    scroll-snap-type: y mandatory;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+article { display: none; }
+
+article.active {
+  display: block;
+  animation: fade 0.5s ease backwards;
+}
+.swiper {
+    width: 900px;
+    height: 600px;
+    .swiper-slide{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        background-color: #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+    }
+  }
+  .swiper-slide:hover{
+    -webkit-box-shadow: 0px 20px 20px -11px rgba(255,218,107,1);
+    -moz-box-shadow: 0px 20px 20px -11px rgba(255,218,107,1);
+    box-shadow: 0px 20px 20px -11px rgba(255,218,107,1);
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    
+  }
+
+
+h1, h2, h3, h4, p {
+    font-family: var(--fuenteHeading);
+    color: whitesmoke;
+}
+
+body {
+    background-color: var(--fondo);
+    margin: 0; 
+    font-size: 3.75rem;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.container {
+    background-color: var(--container);
+    max-width: 110rem;
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start; 
+    margin: auto;
+    border-radius: 3rem;
+    border: 0.3rem solid var(--jet);
+}
+
+.navcontain {
+    margin-top: 0.1rem;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+}
+
+.navar {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    background-color: var(--fondo);
+    width: 50rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem; 
+    border-radius: 1.5rem;
+    height: auto;
+    padding: 1.5rem 1.5rem;
+    align-items: center;
+}
+li{
+    font-family: var(--fuenteHeading);
+    font-size: 4rem;
+    color: whitesmoke;
+    list-style: none;
+   
+}
+.element {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--fondo);
+    border: none;
+    font-size: 4rem;
+    font-family: var(--fuenteHeading);
+    color: whitesmoke;
+}
+.element.active {
+    color: var(--second); 
+}
+
+.element:hover {
+    color: var(--second); 
+}
+.footer-img img {
+    width: 7rem;
+    height: 7rem;
+    object-fit: contain;
+}
+.ref {
+    font-family: var(--fuenteHeading);
+    font-size: 3rem;
+    color: whitesmoke;
+    list-style: none;
+    text-decoration: none;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    gap: 10rem;
+}
+
+.icon-conte img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+}
+.icon-conte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon-conte:hover{
+    color: var(--second);
+}
+.swiper-button-prev::after{
+    color: var(--fondo);
+}
+.swiper-button-next::after{
+    color: var(--fondo);
+}
+.swiper-pagination::after{
+    background-color: var(--fondo);
+}
+.message p{
+    color: whitesmoke;
+    font-weight: lighter;
+}
+.text-container{
+    padding: 0rem 1.5rem;
+    text-align: justify;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+.text-container p {
+    font-size: 30px;
+    line-height: 5rem;
+}
+.swiper-pagination-bullet-active {
+    color: var(--fondo); 
+}
+.icons-tech img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+    color: var(--second);
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .swiper {
+        width: 100%;
+    }
+
+    .navar {
+        width: 50%; 
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+    }
+    .icon-conte img {
+        width: 15rem;
+        height: 15rem;
+        object-fit: contain;
+    }
+    .img-container {
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+    }
+    .list-img{
+        width: 90%; 
+        display: flex;
+        flex-direction: column;
+    }
+    img {
+        width: 100%;
+    }
+}
+@media (max-width: 468px) {
+    .swiper {
+        width: 100%;
+        height: 30rem;
+    }
+    .navar {
+        width: 75%; 
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        font-size: 2.5rem;
+    }
+}

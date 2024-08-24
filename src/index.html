@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Project View</title>
+</head>
+
+<body>
+    <header class="head-class">
+        <h1>Projects Information</h1>
+    </header>
+    <main class="container">
+
+        <div class="navcontain">
+            <ul class="navar">
+                <li><button class="element active" data-nav-link>Views</button></li>
+                <li><button class="element " data-nav-link>Description</button></li>
+            </ul>
+        </div>
+        <article class="views active" data-page="views">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="/public/img-init.png" alt="image" loading="lazy">
+
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/public/img-1.png" alt="image" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/public/img-2.png" alt="image" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/public/img-3.png" alt="image" loading="lazy">
+                    </div>
+                    ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+            <div class="message">
+                <p>Slide the imgage or use the button to see all proyect images</p>
+            </div>
+            <div class="contact">
+                <div class="cont">
+                    <a class="ref icon-conte" href="https://github.com/jorgenico0105" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/public/icon-github.svg" alt="git">
+                        Github
+                    </a>
+                </div>
+                <div class="cont">
+                    <a class="ref icon-conte" href="https://unrivaled-puffpuff-e4196c.netlify.app/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/public/icon-live.svg" alt="live">
+                        Live Server
+                    </a>
+                </div>
+            </div>
+        </article>
+        <article class="description" data-page="description">
+            <h1>Proyect Description</h1>
+            <div class="text-container">
+                <p>The expense controller project is a project implemented using React, coupled with Vite and written with TypeScript. For the styling of the components we used Tailwind and certain special components like the modal window we used an additional library called HeadlessUi, while for the icons we used the HeroIcons library. For the dynamic graphic that we have in the project we worked with a react library called react-circular-bar and like all the logic of this application was handled with a useReducer for the general states, while for specific states we used useState, for certain validations we used the Hook of useMemo, while for the localStorage function we used the hook of useEffect. The handling of our dates was handled with React-date-picker, all this was built applying context API to be able to handle our useReducer in a global way. The purpose of the project is to be able to have a visual and written control of our expenses and categorize it to be able to see in what we are spending the money and in what categories we could make cuts if we are not reaching the end of the month with the current expenses. </p>
+            </div>
+            <div class="tech">
+                <p>Technologies Used</p>
+                <div class="icons-tech">
+                    <img src="/public/icon-type.svg" alt="img">
+                    <img src="/public/icon-react.svg" alt="img">
+                    <img src="/public/icon-html.svg" alt="img">
+                    <img src="/public/icon-css.svg" alt="img">
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="foot">
+        <h4>All Rights Reserved. Jorge Nicolas Granda Costa</h4>
+        <div class="footer-img">
+            <a href="#"><img src="/public/icon-facebook.svg" alt="facebook"></a>
+            <a href="#"><img src="/public/icon-instagram.svg" alt="instagram"></a>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
+</html>
